@@ -5,7 +5,7 @@ import BookingItem from "./_components/booking-item"
 import Header from "./_components/header"
 import { Button } from "./_components/ui/button"
 import { Input } from "./_components/ui/input"
-import { QuickSearchOptions } from "./_constants/search"
+import { quickSearchOptions } from "./_constants/search"
 import { db } from "./_lib/prisma"
 
 const Home = async () => {
@@ -28,7 +28,7 @@ const Home = async () => {
           </Button>
         </div>
         <div className="mt-6 flex gap-3 overflow-x-scroll [&::-webkit-scrollbar]:hidden">
-          {QuickSearchOptions.map((option) => (
+          {quickSearchOptions.map((option) => (
             <Button className="gap-2" variant="secondary" key={option.title}>
               <Image
                 alt={option.title}
